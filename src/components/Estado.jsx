@@ -16,11 +16,11 @@ export default class Estado extends Component {
       name: "Tony Veliz",
     };
 
-    setInterval(() => {
-      this.setState({
-        contador: this.state.contador + 1,
-      });
-    }, 1000);
+    // setInterval(() => {
+    //   this.setState({
+    //     contador: this.state.contador + 1,
+    //   });
+    // }, 1000);
   }
   render() {
     return (
