@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-export default class Padre extends Component {
+export default class Father extends Component {
   state = {
     counter: 0,
   };
@@ -13,28 +13,21 @@ export default class Padre extends Component {
   render() {
     return (
       <>
-        <h2>Comunicacion entre Componentes</h2>
+        <h3>Soy un Counter hecho con Keyboard Mecanico</h3>
         <p>
           Counter <b>{this.state.counter}</b>
         </p>
-        <Hijo
-          increaseCounterButton={this.increaseCounter}
-          message="Child Message 1"
-        />
-        <Hijo
-          increaseCounterButton={this.increaseCounter}
-          message="Child Message 2 "
-        />
+        <Child increaseButton={this.increaseCounter} message="Soy un mensaje" />
       </>
     );
   }
 }
 
-function Hijo(props) {
+function Child(props) {
   return (
     <>
       <h3>{props.message}</h3>
-      <button onClick={props.increaseCounterButton}>+</button>
+      <button onClick={props.increaseButton}>Add</button>
     </>
   );
 }
